@@ -1,4 +1,50 @@
-body {
-	background-color: beige;
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Roboto', sans-serif;
 }
 
+body {
+	background-color: #111315;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+p { 
+	font-size: 20pt;
+}
+
+#title_group {
+	margin-left: -20%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.subheader {
+	font-size: 36pt;
+}
+
+.section_div{
+	margin: 5%;
+}
+
+#about_me_text {
+	display: inline-block;
+	height: 70vh;
+	width: 40vw;
+}
+
+#my_picture {
+	display: inline-block;
+	float: right;
+	height: 70vh;
+}
+
+.project {
+	margin-top: 50px;
+}
+
+.project_title {
+	font-size: 24pt;
+}
