@@ -24,5 +24,9 @@ def recolorBotUpload():
 def recolorDisplayImage(filename):
     return send_from_directory('./recolorbot/photos', filename)    
 
+@app.route('/recolorbot', methods=['GET'])
+def recolorBotReroute():
+    return redirect("https://www.reddit.com/user/recolorbot")
+
 if __name__ == "__main__":
     app.run()
