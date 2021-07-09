@@ -9,6 +9,14 @@ app.config['SECRET_KEY'] = 'aslkfjhcaniewjnaefs'
 def home():
    return render_template("home.html" )
 
+@app.route('/contact', methods=['GET'])
+def contact():
+   return render_template("contact.html" )
+
+@app.route('/projectList', methods=['GET', 'POST'])
+def project_list():
+   return render_template("project_list.html" )
+
 @app.route('/recolorbot/photos/<filename>', methods=['GET'])
 def recolorDisplayImage(filename):
     return send_from_directory('./recolorbot/photos', filename)    

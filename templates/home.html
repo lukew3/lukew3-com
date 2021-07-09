@@ -1,87 +1,19 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<nav>
+{% block body %}
 
-</nav>
-
-<img id="title_group" src = "../static/title_group.svg"/> 
-
-<div class="section_div">
-	<div id="about_me_text">
-		<h2 class="subheader">About me</h2>
-		<p id="about_me">
-		Im a 17 year-old programmer from Cleveland, Ohio.
-		I write mostly in Python but also work in Javascript and like solving programming puzzles in C++.
-		I have experience with the MERN stack, Flask, Django, and Postgresql.
-		I create a wide-range of applications, such as command line tools, websites, and libraries.
-		You can find my work on my Github.
-		</p>
-	</div>
-	<img id="my_picture" src = "../static/me.jpg"/> 
+<div class="bgContainer">
+	<div class="bgSpacer"></div>
+	<img class="bg" src="../static/cherry-blossom.png">
 </div>
-
-<div class="section_div">
-<h2 class="subheader">Projects</h2>
-<div class="project">
-	<h3 class="project_title">mathgenerator</h3>
-	<p class="project_description">
-	Mathgenerator is a python package that generates a wide variety of math problems with customizable results. I promoted the project and have had 64 other people make contributions to it. Through this project, I learned how to make and maintain a large-scale codebase. I learned about testing through Github Actions and managing issues and pull requests on Github.
-	</p>
-	<div class="project_links">
-		<a href="https://github.com/lukew3/mathgenerator">Github</a>
-		<a href="https://todarith.ml/generate">Website</a>
-	</div>
-</div>
-<div class="project">
-	<h3 class="project_title">ghlog</h3>
-	<p class="project_description">
-	Ghlog is a command line tool to write log, journals, or notes to a github repo from your command line. Learned how to design a command line interface and work with APIs.
-	</p>
-	<div class="project_links">
-		<a href="https://github.com/lukew3/ghlog">Github</a>
-	</div>
-</div>
-<div class="project">
-	<h3 class="project_title">todarith.ml</h3>
-	<p class="project_description">
-	Todarith.ml is the website that I created to host mathgenerator and eventually, use machine learning to create, sort, and teach math problems. With this I created a Postgresql database to store math problems in. The database currently has about 1.5 million problems, almost entirely generated with mathgenerator. Learned a ton through this project including: web hosting and server deployment, databases, Flask(python web framework), front end development.
-	</p>
-	<div class="project_links">
-		<a href="https://todarith.ml">Website</a>
-	</div>
-</div>
-<div class="project">
-	<h3 class="project_title">vid2slides</h3>
-	<p class="project_description">
-	A command line tool and python package that can take in a video recording of a slideshow and produce a pdf of the slides presented. Inspired by watching code conference presentations on Youtube that were just people reading information off of slides and wanting the slides rather than just a video. Built an accopanying website where users can upload their videos and download the resulting slides. Learned image processing and Pillow.
-	</p>
-	<div class="project_links">
-		<a href="https://github.com/lukew3/vid2slides">Github</a>
-		<a href="https://vid2slides.tk">Website</a>
-	</div>
-</div>
-<div class="project">
-	<h3 class="project_title">Recrypto</h3>
-	<p class="project_description">
-	A website I built with a couple of friends at Hyland Hackathon 2020. Social media type site focused on saving the earth. Didn’t know how to write and deploy a website before this so I learned Flask and the basics of web development the week before.
-	</p>
-	<div class="project_links">
-		<a href="https://github.com/lukew3/recrypto">Github</a>
-		<a href="https://recrypto.herokuapp.com">Website</a>
-	</div>
-</div>
-
-</div>
-
-<div class="section_div">
-<h2 class="subheader">Contact</h2>
-<p>The best way to reach me is to email me at <a href="mailto:lukew25073@gmail.com">lukew25073@gmail.com</a><p>
-</div>
-
-<div class="section_div">
-<h2 class="subheader">Profiles</h2>
-<a href="https://github.com/lukew3">Github</a>
+<div class="homeText">
+	<em><h1 class="nameTag">Luke Weiler</h1></em>
+	<p>
+		<a href="https://github.com/lukew3">Github</a> //
+                <a href="../static/lukeweiler-resume.pdf" download="lukeweiler-resume">Resume</a> // 
+		<a href="{{ url_for('contact') }}">Contact</a> //
+		<a href="{{ url_for('project_list') }}">Projects</a>
+        </p>
 </div>
 
 {% endblock %}
