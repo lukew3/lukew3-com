@@ -53,7 +53,9 @@ body, html {
 .projectsListItem {
         width: 500px;
 }
-
+.aboutText {
+	max-width: 600px;
+}
 
 @media screen and (max-width: 600px) {
         .homeText {
@@ -69,7 +71,7 @@ body, html {
         .projectsList {
                 margin: 10px;
         }
-        .projectsListItem {                                                                                                                                 
-                width: calc(100% - 10px);                                                                                                                   
-        }                                                                                                                                                   
+        .projectsListItem {
+                width: calc(100% - 10px);
+        }
 }

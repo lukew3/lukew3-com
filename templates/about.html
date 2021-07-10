@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="bgContainer">
+	<div class="bgSpacer"></div>
+	<img class="bg" src="../static/cherry-blossom.png">
+</div>
+<div class="homeText">
+	<em><h1 class="nameTag">Luke Weiler</h1></em>
+	<h3>About me</h3>
+	<p class="aboutText">I'm an aspiring software developer studying at The Ohio State University. In the past I have worked with Python, and Javascript and am familiar with Flask and React. I'm currently open to contract and part-time work, but am unable to work full time due to school. Check out the links on my page to learn more.</p>
+	<a href="{{ url_for('home') }}">Back to home</a>
+</div>
+
+{% endblock %}
