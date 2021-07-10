@@ -6,6 +6,12 @@ body, html {
   font-family: 'Noto Serif', serif;
 }
 
+/* Might use this later, not sure if I like it though */
+.sunsetGradient {
+  background: rgb(67,138,177);
+  background: linear-gradient(180deg, rgba(67,138,177,1) 0%, rgba(67,138,177,1) 19%, rgba(252,158,79,1) 80%, rgba(252,68,63,1) 100%);
+}
+
 .homeText {
         position: absolute;
         left: 200px;
