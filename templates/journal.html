@@ -1,0 +1,20 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>lukew3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<style>
+	textarea {
+		width: 100%;
+</style>
+</head>
+<body>
+	<h1>Add entry</h1>
+	<form action="{{ url_for('add_journal_entry') }}" method="post">
+		<textarea name="entry"></textarea>
+		<input type="submit" value="Submit">
+        </form>
+</body>
+</html>
+
