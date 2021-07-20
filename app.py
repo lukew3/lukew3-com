@@ -3,6 +3,7 @@ import requests, uuid
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import pytz
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'aslkfjhcaniewjnaefs'
@@ -19,11 +20,11 @@ def contact():
 
 @app.route('/projectList', methods=['GET', 'POST'])
 def project_list():
-   return render_template("project_list.html" )
+   return render_template("project_list.html")
 
 @app.route('/recolorbot/photos/<filename>', methods=['GET'])
 def recolorDisplayImage(filename):
-    return send_from_directory('./recolorbot/photos', filename)    
+    return send_from_directory('./recolorbot/photos', filename)
 
 @app.route('/recolorbot', methods=['GET'])
 def recolorBotReroute():
@@ -49,7 +50,7 @@ def add_journal_entry():
         if text == "":
             return render_template("journal.html")
         now = datetime.now(pytz.timezone('America/New_York'))
-        new_entry = JournalEntry(text=text, 
+        new_entry = JournalEntry(text=text,
                 year=now.strftime("%Y"),
                 month=now.strftime("%m"),
                 day=now.strftime("%d"),
@@ -58,6 +59,9 @@ def add_journal_entry():
         db.session.commit()
     return render_template("journal.html")
 
+@app.route('/mathgenerator', methods=['GET'])
+def mathgenerator():
+    return render_template("mathgenerator.html")
+
 if __name__ == "__main__":
     app.run()
-
