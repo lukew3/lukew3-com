@@ -49,6 +49,7 @@ body, html {
         position: absolute;
         margin: 50px;
         padding-bottom: 50px;
+        background-color: #add8e6d9;
 }
 .projectsListItem {
         width: 500px;
@@ -69,7 +70,7 @@ body, html {
         .projectsList {
                 margin: 10px;
         }
-        .projectsListItem {                                                                                                                                 
-                width: calc(100% - 10px);                                                                                                                   
-        }                                                                                                                                                   
+        .projectsListItem {
+                width: calc(100% - 10px);
+        }
 }
